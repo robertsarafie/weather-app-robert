@@ -16,64 +16,86 @@
     rel="stylesheet"
     href="css/style.css"
   >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 
-<body>
+<body class="body transition">
 
-  <div class="card">
-    <div class="search">
-      <input
-        type="text"
-        placeholder="Enter Location"
-      >
-      <button><img src="images/search.png"></button>
+  <div class="container">
+    <div class="wrapper">
+      <div class="search-section">
+        <form>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Enter location"
+          >
 
-      <button class="favorite">⭐</button>
-    </div>
+          <button title="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
 
-    <div class="favorites">
-      <button class="f f1">London</button>
-      <button class="f f2">Rome</button>
-      <button class="f f3">New York</button>
-    </div>
+        </form>
 
-    <div class="error">
-      <p>Invalid city name</p>
-    </div>
+        <button class="favorite-button">
+          <i class="fa-solid fa-star"></i>
+        </button>
+      </div>
 
-    <div class="weather">
-      <img
-        src="images/rain.png"
-        class="weather-icon"
-      >
-      <h1 class="temp">22°C</h1>
-      <h2 class="city">Sibiu</h2>
-      <div class="details">
-        <div class="col">
-          <img src="images/humidity.png">
-          <div>
-            <p class="humidity">50%</p>
-            <p>Humidity</p>
+      <ul class="favorites">
+        <li class="f f1">Bali</li>
+        <li class="f f2">Rome</li>
+        <li class="f f3">New York</li>
+      </ul>
+
+      <div class="error">
+        <p>Invalid location</p>
+      </div>
+
+      <div class="weather">
+        <div class="circle"></div>
+
+        <img
+          src="images/drizzle.png"
+          class="weather-icon"
+        >
+
+        <div class="card">
+          <div class="card-content">
+            <h1 class="temp">22°C</h1>
+            <h2 class="city">Sibiu</h2>
+
+            <div class="col">
+              <i class="fa-solid fa-droplet"></i>
+              <div>
+                <p class="humidity">50%</p>
+                <p>Humidity</p>
+              </div>
+            </div>
+
+            <div class="col">
+              <i class="fa-solid fa-wind"></i>
+              <div>
+                <p class="wind">15 km/h</p>
+                <p>Wind Speed</p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="col">
-          <img src="images/wind.png">
-          <div>
-            <p class="wind">15 km/h</p>
-            <p>Wind Speed</p>
-          </div>
-        </div>
       </div>
     </div>
+  </div>
 
-
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.js"
-      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-      crossorigin="anonymous"
-    ></script>
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
